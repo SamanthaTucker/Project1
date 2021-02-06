@@ -1,6 +1,6 @@
 # Project1
 
-A memory based game where the user must memorize a popup sequence and click the gameboards icon's in the correct sequence it displayed. As levels progress, the sequences will increase as well as the gameboards icons. The user will offically win the game after a certain amount of levels have been completed! :potted_plant:
+A memory based game where the user must memorize a popup sequence and click the gameboards icon's in the correct sequence it displayed. As levels progress, the sequences will increase as well as the gameboards icons. The user will offically win the game after a certain amount of levels have been completed! 
 
 # Wireframe:
 
