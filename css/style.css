@@ -1,0 +1,16 @@
+body{
+    background-color: #F8F5D9;
+}
+
+.grid-container{
+    background-color: #BEDBD9;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.grid-item{
+    background-color: #D6ECCB;
+}
+
+
