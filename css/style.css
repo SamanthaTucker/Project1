@@ -1,16 +1,83 @@
 body{
-    background-color: #F8F5D9;
+    background-color: #FFE2D4;
+    font-family: 'Dancing Script', cursive;
+}
+
+.instructions{
+    text-align: center;
+    font-size: 30px;
 }
 
 .grid-container{
-    background-color: #BEDBD9;
+    background-color: #FFEFDC;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 50px;
+    border: 5px solid black;
+    width: 100%;
+    align-items: center;
 
 }
 
 .grid-item{
-    background-color: #D6ECCB;
+    background-color: #93C3CB;
+    padding: 100px;
+    border: 3px solid black;
 }
 
+.plant-img{
+    align-items: center;
+}
 
+.game-name{
+    text-align: center;
+    font-size: 70px;
+    -webkit-animation:colorchange 20s infinite alternate;
+}
+@-webkit-keyframes colorchange {
+    0% {
+      
+      color: #BF374C;
+    }
+    10% {
+      
+      color: #F2762E;
+    }
+    20% {
+      
+      color: #F2D338;
+    }
+    30% {
+      
+      color: #248EA6;
+    }
+    40% {
+      
+      color: #FFA35C;
+    }
+    50% {
+      
+      color: #FFD45C;
+    }
+    60% {
+      
+      color: #5F6FFA;
+    }
+    70% {
+      
+      color: #CE5DDE;
+    }
+    80% {
+   
+      color: #BB73F5;
+    }
+    90% {
+   
+      color: #FF6BC7;
+    }
+    100% {
+      
+      color: #5F6FFA;
+    }
+  } /* This effect I did take time to google and find help from different websites, the main sourse I took this code from is:  https://stackoverflow.com/questions/16782498/looping-animation-of-text-color-change-using-css3
