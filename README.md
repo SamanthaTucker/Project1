@@ -2,6 +2,12 @@
 
 A memory based game where the user must memorize a popup sequence and click the gameboards icon's in the correct sequence it displayed. As levels progress, the sequences will increase as well as the gameboards icons. The user will offically win the game after a certain amount of levels have been completed! 
 
+# User Stories:
+-As a User, I should be able to restart my game at any time.
+-As a User, I should be able to click a dropdown menu to display the instructions.
+-As a User, the game should be easy to follow.
+-As a User, I should be able to choose if I want to play One-player or Two-player.
+
 # Wireframe:
 
 ![alt text](https://lh3.googleusercontent.com/JDFOa76VAqodopEtwR2JpBsOK39yZcYz4cCTkdSxU1ek1TkWj7WuSewzcCTTrX4dbilYkf-alo41cev4DA9gkmKcmDEEDDoGxKbilc4YZg2hd0DQR92xF6-iRpjVyEKbrkkGa68evRqTq1rToZ-Nbh9tQ-tiQERiQOlfTXC2nU_OFgcv0GCQqTicOiyKH9l3mlV0n2g3MbwXxzWUmm0cMZH8dOZBXhNUlMiy73WhktmLgkJ_dh29Ef0OvoBndtg4RRex7CrMoTnZ0C9QD3-0UouU_U-pxiDoCnD0d3UO626GPctUC99O6X7yguvJ7YSDCd5POBSWfoe-oWKQH9FJarb64rB1vsOFXdzPCofd30HFGf2KZw6tAcoPy5_TXgXKrGEGHplDX2wuU7CVYl1Yeexw_afhWx3zKfoHOAY5kuQTPwJ7IuTvT8jBH9F1IFeXq1DIAgw07aoiBxNsLnCaY17wcdWrEGx6yArD-4vwN4lArYZzuLLDQRhSG83kf1ozBQW822d-V8GWVJ90W6ApzMJywXpVVCoSfByetxDrJ_yQpmjaK5_dps9c13uSX_ga_awZb7tpasqR1Rl6QZH4giChWNUFGaVIkDLwl4-0_05gS_pbEfn-hLp75xxYYZ5HfONUZhMT-3tB8rmjjIA7b_r5i-Z7DQlYAfz4AHtCHu8TmFuMl72Ms4UaxX9I=w1414-h1078-no?authuser=0)
