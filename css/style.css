@@ -1,6 +1,7 @@
 body{
     background-color: #FFE2D4;
     font-family: 'Dancing Script', cursive;
+    border: 5px solid lightblue;
 }
 
 .instructions{
@@ -19,6 +20,7 @@ body{
     row-gap: 100px;
     margin: 100px;
     justify-content: center;
+    perspective: 1000px;
     
 }
 
@@ -29,17 +31,17 @@ body{
     border-radius: 25%;
     margin: auto;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.6);
-   
-   
+    transition: transform .7s;
+    transform-style: preserve-3d;   
 }
 
-.plant-img-front{
+.plant-img-front, .plant-img-back{
   justify-items: center;
+  
+  backface-visibility: hidden;
 }
 
-.plant-img-back{
-  background-color:  pink;
-}
+
 
 .game-name{
     text-align: center;
@@ -105,4 +107,21 @@ body{
   margin: 0 auto;
   padding: 10px;
   width: 25%;
+}
+
+.grid-item:hover{
+  transform: scale(1.2);
+}
+
+.grid-item.flip{
+transform: rotateY(180deg);
+}
+
+.restart-button{
+  background-color: pink;
+  text-transform: uppercase;
+  border: gray 2px solid;
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  font-weight: bold;
 }
