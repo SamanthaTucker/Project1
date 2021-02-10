@@ -6,25 +6,17 @@ body{
 .instructions{
     text-align: center;
     font-size: 30px;
+    margin: auto;
+    padding: 25px;
+   
 }
 
 .grid-container{
-    /* background-color: #FFEFDC;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 200px 200px 200px;
-    padding: 50px;
-    border: 5px solid black;
-    width: 50%;
-    height: 50%;
-    align-items: center;
-    margin: auto; */
     display: grid;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 80px 80px 80px; 
     column-gap: 150px;
     row-gap: 100px;
-    align-items: center;
     margin: 100px;
     justify-content: center;
     
@@ -32,21 +24,21 @@ body{
 
 .grid-item{
     background-color: #93C3CB;
-    padding: 50px;
+    padding: 40px;
     border: 3px solid black;
+    border-radius: 25%;
     margin: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.6);
+   
+   
 }
 
 .plant-img-front{
   justify-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  
-  
 }
 
 .plant-img-back{
-  background-color:  #93C3CB;
+  background-color:  pink;
 }
 
 .game-name{
@@ -101,19 +93,16 @@ body{
     }
   } /* This effect I did take time to google and find help from different websites, the main sourse I took this code from is:  https://stackoverflow.com/questions/16782498/looping-animation-of-text-color-change-using-css3 */
 
-.btn-container{
+
+.button-div{
+  margin-top: 90px;
+  padding-left: 50px;
+  padding-bottom: 50px;
   display: flex;
-  justify-content: center;
 }
 
-.btn{
-   border-radius: 5px;
-   padding: 15px 25px;
-   font-size: 25px;
-   margin: 30px 30px;
-   color:  #88E8F2;
-   background-color: #D96690;
-   margin-top: 100px;
-   align-items: center;
+.restart-button{
+  margin: 0 auto;
+  padding: 10px;
+  width: 25%;
 }
-
