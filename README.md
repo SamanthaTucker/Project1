@@ -5,7 +5,7 @@ The cards on a grid layout will start out blank, when the user begins the game, 
 
 # User Stories:
 * As a User, I should be able to restart my game at any time.
-* As a User, I should be able to click a dropdown menu to display the instructions.
+* As a User, I should be able to click a dropdown menu to display the instructions./ I should be able to clearly read the instructions of the game.
 * As a User, the game should be easy to follow.
 * As a User, I should be able to choose if I want to play One-player or Two-player.
 * As a User, I should understand that each card that pops up in a 1, 2, 3..ect Sequence, needs to be memorized and matched by my clicks
