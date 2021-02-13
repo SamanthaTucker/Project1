@@ -18,8 +18,12 @@ The cards on a grid layout will start out blank, when the user begins the game, 
 
 ![alt text](https://lh3.googleusercontent.com/eD0cfbBQTNQNp1Gq8xTwMSAB_TGasQEna5VLxTL2XQbEy4odUV8i40FqolRPpLwzH8F1VTkiFzgtlM8nT9VAQVQFNKesa-NiLOo2kixichSXnPL7Dc0dRDavivBzhAyHNteII85PIHV2Asrgn6XGs7gapm3HnyP1KvcNqNUzlL0jxDnNGMZpYCrih1YllEnA6OT3KuOrh3KNXWd5N9iAt4GtVbbuE3byj1T5HMhr2XxEVaaGgOR8YW6nn5W0fAOr6C289L2-ogdPXG5ernPqyLAciQkpHlCnZ3VTr767ouEAn-7hTzQz8H-3YZaRw-O7X5e5Xps5JNOTpUSHPIVl177pD17Bfoij-v3CWMAO8Na1pOsMdOazl_29-SIiSqNUF-OtFqoomjNN5ynb74waePA6n0rlEfrARrxMiGpJsRGCXobx8R3LMb04A0Qwe0cCw83vgNdLPQbQAm2yGbAF1BrUIKpyWv5-ECcIaC1qs2X4irFjkSMbWV5hS5a4NnhFUdFThrpBUReeveasEHVb9TXwkHJzGUWc05TdjaP1IwCxlA2ns1mJinRfN5MbAdOfKoiIkUgzBQW41QUTn6pc-vhJ33fEgS-CkfArbvjJpgKPsq7gODqGz1e9vfJlkNrpoYJXz8AIYNZIxdhu2CBSKKP1uVocPFKLClAl-00Y1IBx23t_ZssdSRBT6j8q=w1087-h818-no?authuser=0)
 
+# Game as od right now:
+* User is able to see when their cards match on the console log.
+* User is able to see when their cards are NOT a match in the console log.
+* Cards change colors when 'disabled' and 'open'/Clicked on.
 
-#Forthcoming Features:
+# Forthcoming Features:
 * The cards will be able to flip to a blank side so the user wont be able to see all the match cards yet.
 * Matched cards will turn green and do an animation once a match is found!
 * When a match is not found, cards will turn red, do an animation, and reset to be clicked again.
