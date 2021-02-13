@@ -1,86 +1,100 @@
-console.log("Project 1")
+console.log("Project 1 JS")
 
 
-//first create an array of my 'cards' aka all my images
-const imagesArray = [
-    {name:"purple", img: "https://bit.ly/2OoGT5G"},
-    {name:"tulip", img: "https://bit.ly/3jAsoHB"},
-    {name:"rose", img: "https://bit.ly/3cXvPH1"}
-]
+let flowers = document.getElementsByClassName("flowers")
+let flowerCards = [...flowers] //  thank you https://dev.to/sagar/three-dots---in-javascript-26ci
+const flowerUl = document.getElementById("all-flower-cards")
+let matchedFlower = document.getElementsByClassName("match")
+let clickedCards = []
 
-//the div holding my card image is the grid-item
-const gridItemImages = document.getElementsByClassName('plant-img-front')
-
-const images = [...imagesArray] //The three dots in JavaScript are spread / rest operator... -- Thank you stackoverflow.com 
-
-//now time for my loop to add my eventlisteners to each of my cardImages
-for(let i = 0; i < images.length; i++){
-    images[i].addEventListener('click', displayGridImages)
-    console.log(images[i])
-}
-
-// i need to actually display the cards now:
-
-const displayGridImages = ()=>{
-    this.classList.toggle('open')
-    this.classList.toggle('show')
-    this.classList.toggle('disabled')
-}
-
-//https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array 
-
-function shuffle(array) {
-    let currentIndex = array.length, temporaryValue, randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+function shuffleIcons(flowerCards) {
+    let currentNum = flowerCards.length, tempValue, randomIcon
+    while (currentNum !== 0) {
+        randomIcon = Math.floor(Math.random() * currentNum)
+        currentNum -= 1
+        tempValue = flowerCards[currentNum]
+        flowerCards[currentNum] = flowerCards[randomIcon]
+        flowerCards[randomIcon] = tempValue
     }
-  
-    return array;
-  }
+    return flowerCards
+}
+//console.log(flowerCards)
 
-  console.log(shuffle(images))
-
-
-const wholeBoard = document.querySelector('grid-container')
+document.body.onload = startGame()
 
 function startGame(){
-let shuffledCards = shuffle(images)
+    let clickedCards = []
+    flowerCards = shuffleIcons(flowerCards)
+        for (let i = 0; i < flowerCards.length; i++){
+            flowerUl.innerHTML = ""
+              clickedCards.forEach.call(flowerCards, function(icon) {
+                  flowerUl.appendChild(icon)
+            })
+        flowerCards[i].classList.remove("show", "open", "match", "disabled")
+     }
+}
+startGame()
 
-for(let i = 0; i < shuffledCards.length; i++){
-    [].forEach.call(shuffledCards, function(item){
-        wholeBoard.appendChild(item)
+const displayCard = function (){
+    this.classList.toggle("open")
+    this.classList.toggle("show")
+    this.classList.toggle("disabled")
+}
+
+function cardOpen(event) { // I cant get this to reach the type of my images!!!!!
+    clickedCards.push(event.target)
+    let length = clickedCards.length
+
+        if(length === 2){
+            //console.log(clickedCards)
+         if(clickedCards[0].src === clickedCards[1].src){
+             console.log('Found match')
+                matched()
+            }else {
+                console.log('No match found')
+                unmatched()
+            }
+    }
+}
+//for matching cards!!
+function matched(){
+    clickedCards[0].classList.add("match", "disabled")
+    clickedCards[1].classList.add("match", "disabled")
+    clickedCards[0].classList.remove("show", "open", "no-event")
+    clickedCards[1].classList.remove("show", "open", "no-event")
+    clickedCards = []
+}
+
+// no match!!!
+function unmatched(){
+    clickedCards[0].classList.add("unmatched")
+    clickedCards[1].classList.add("unmatched")
+    disable()
+    setTimeout(function(){
+        clickedCards[0].classList.remove("show", "open", "no-event","unmatched")
+        clickedCards[1].classList.remove("show", "open", "no-event","unmatched")
+        enable()
+        clickedCards = []
+    }, 1000)
+}
+
+for (let j = 0; j < flowerCards.length; j++){
+    flowers = flowerCards[j]
+    flowers.addEventListener("click", displayCard) 
+    flowers.addEventListener("click", cardOpen)
+}
+
+function disable(){
+    Array.prototype.filter.call(flowerCards, function(flowers){
+        flowers.classList.add('disabled')
     })
 }
+
+function enable(){
+    Array.prototype.filter.call(flowerCards, function(flowers){
+        flowers.classList.remove('disabled')
+        for(let j = 0; j < matchedFlower.length; j++){
+            matchedFlower[j].classList.add("disabled")
+        } 
+     })
 }
-
-window.onload = startGame()
-
-
-
-
-
-// let displayImages = ()=>{
-//     this.classList.toggle('show')
-//     this.classList.toggle('open')
-// }
-
-// function shuffle(array){
-//     const currentImages = array.length, randomIndex
-
-//     while(currentImages !== 0){
-//         randomIndex = Math.floor(Math.random()* currentIndex)
-//         currentIndex -= 1
-//         array[currentIndex] = array[randomIndex]
-//     }
-//     return array
-// }

@@ -1,112 +1,177 @@
-body{
-    background-color: #FFE2D4;
-    font-family: 'Dancing Script', cursive;
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #D9CCC5;
+  font-family: 'Dancing Script', cursive;
 }
 
-.instructions{
-text-align: center;
-font-size: 40px;
-}
-
-.grid-container{
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 80px 80px 80px;
-    column-gap: 150px;
-    row-gap: 100px;
-    margin: 100px;
-    justify-content: center;
-    
-}
-
-.grid-item{
-    background-color: #93C3CB;
-    padding: 40px;
-    border: 3px solid black;
-    border-radius: 25%;
-    margin: auto;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.6);
-}
-
-.plant-img-front{
-   padding: 20px;
-   border-radius: 5px;
-   visibility: hidden;
-}
-
-.game-name{
-    text-align: center;
-    font-size: 70px;
-    -webkit-animation:colorchange 20s infinite alternate;
+h1{
+  font-size: 80px;
+  text-align: center;
+  -webkit-animation: colorchange 20s infinite alternate;
 }
 @-webkit-keyframes colorchange {
-    0% {
+  0% {
 
-      color: #BF374C;
-    }
-    10% {
+    color: #BF374C;
+  }
+  10% {
 
-      color: #F2762E;
-    }
-    20% {
+    color: #F2762E;
+  }
+  20% {
 
-      color: #F2D338;
-    }
-    30% {
+    color: #F2D338;
+  }
+  30% {
 
-      color: #248EA6;
-    }
-    40% {
+    color: #248EA6;
+  }
+  40% {
 
-      color: #FFA35C;
-    }
-    50% {
+    color: #FFA35C;
+  }
+  50% {
 
-      color: #FFD45C;
-    }
-    60% {
+    color: #FFD45C;
+  }
+  60% {
 
-      color: #5F6FFA;
-    }
-    70% {
+    color: #5F6FFA;
+  }
+  70% {
 
-      color: #CE5DDE;
-    }
-    80% {
+    color: #CE5DDE;
+  }
+  80% {
 
-      color: #BB73F5;
-    }
-    90% {
+    color: #BB73F5;
+  }
+  90% {
 
-      color: #FF6BC7;
-    }
-    100% {
+    color: #FF6BC7;
+  }
+  100% {
 
-      color: #5F6FFA;
-    }
-  } /* This effect I did take time to google and find help from different websites, the main source I took this code from is:  https://stackoverflow.com/questions/16782498/looping-animation-of-text-color-change-using-css3 */
-
-
+    color: #5F6FFA;
+  }
+} /* This effect I did take time to google and find help from different websites, the main source I took this code from is:  https://stackoverflow.com/questions/16782498/looping-animation-of-text-color-change-using-css3 */
 .button-div{
-  margin: 10px;
-  padding-left: 100px;
-  padding-top: 10px;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
-
-.grid-item:hover{
-  transform: scale(1.2);
-}
-
 .restart-button{
   background-color: pink;
   text-transform: uppercase;
-  border: gray 2px solid;
-  font-family: 'Dancing Script', cursive;
-  font-size: 25px;
-  font-weight: bold;
-  margin: 0 auto;
+  border:  2px solid gray;
+  margin: 10px;
+  border-radius: 10px;
+  font-size: 20px;
   padding: 10px;
-  width: 25%;
+  cursor: pointer;
+}
+.container {
+	display: flex;
+	justify-content: center;
+  flex-direction: column;
+	align-items: center;
+}
+.gameboard-ul {
+  display: flex;
+	flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+	padding: 20px;
+	margin: 30px;
+}
+
+.gameboard-ul .flowers {
+	margin: 5px;
+  cursor: pointer;
+	background: #D9B8B8;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 5px 20px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.gameboard-ul .flowers.open {
+	transform: rotateY(0);
+	background: #8a40eb;
+	animation-name: flip;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	animation-duration: .75s;
+}
+
+.gameboard-ul .flowers.match {
+	background: greenyellow;
+	animation-name: bounce;
+  animation-duration: 1s;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+}
+
+.gameboard-ul .flowers.unmatched {
+  animation-name: bounce;
+  animation-duration: 1s;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	background: #e2043b;
+}
+
+.gameboard-ul .flowers.disabled {
+	opacity: 0.7;
+  pointer-events: none;
+}
+@keyframes bounce {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+@media (max-width: 360px) {
+	.gameboard-ul {
+		width: 65%;
+	}
+	.gameboard-ul .flowers {
+		height: 50px;
+		width: 70px;
+	}
+}
+@media (min-width: 740px) {
+	.gameboard-ul {
+		width: 660px;
+		height: 680px;
+	}
+	.gameboard-ul .flowers {
+		height: 125px;
+		width: 125px;
+	}
 }
